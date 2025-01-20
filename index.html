@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Мультимодальная база знаний</title>
+  <style>
+    /* Сброс стилей и базовые настройки */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f9f9f9;
+    }
+    header {
+      background: linear-gradient(135deg, #4e54c8, #8f94fb);
+      color: #fff;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    header p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .card {
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-bottom: 40px;
+    }
+    .card h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #4e54c8;
+    }
+    .card p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      margin: auto;
+    }
+    form input, form textarea, form button {
+      margin-bottom: 10px;
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    form button {
+      cursor: pointer;
+      background-color: #4e54c8;
+      color: #fff;
+      border: none;
+      transition: background-color 0.3s;
+    }
+    form button:hover {
+      background-color: #3b42a1;
+    }
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+
+  <!-- Google Analytics (вставьте свой tracking ID) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=ВАШ_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'ВАШ_ID');
+  </script>
+</head>
+<body>
+
+  <header>
+    <h1>Мультимодальная база знаний</h1>
+    <p>Решение, которое ускоряет доступ к данным и оптимизирует бизнес-процессы.</p>
+  </header>
+
+  <section>
+    <div class="card">
+      <h2>Проблема</h2>
+      <p>
+        Компании тратят слишком много времени и ресурсов на поиск и систематизацию данных, что снижает эффективность работы и увеличивает издержки.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Решение</h2>
+      <p>
+        Мультимодальная база знаний объединяет данные из разных источников, делает их доступными за секунды и автоматизирует поиск и систематизацию, сокращая время и затраты.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Отправьте заявку</h2>
+      <form name="contact" method="POST" data-netlify="true" onsubmit="handleSubmit(event)">
+        <!-- Скрытое поле для Netlify -->
+        <input type="hidden" name="form-name" value="contact">
+        
+        <input type="text" name="name" placeholder="Ваше имя" required>
+        <input type="email" name="email" placeholder="Ваш email" required>
+        <textarea name="message" placeholder="Ваше сообщение"></textarea>
+        <button type="submit">Отправить заявку</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2023 Мультимодальная база знаний. Все права защищены.</p>
+  </footer>
+
+  <script>
+    function handleSubmit(e) {
+      // Отслеживание отправки формы через Google Analytics
+      if (window.gtag) {
+        gtag('event', 'submit', {
+          'event_category': 'Form',
+          'event_label': 'Contact Form Submission'
+        });
+      }
+    }
+  </script>
+</body>
+</html>
